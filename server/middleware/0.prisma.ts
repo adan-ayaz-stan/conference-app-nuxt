@@ -8,6 +8,8 @@ declare module 'h3' {
   }
 }
 
+// init prisma
+
 export default eventHandler((event) => {
   if (!prisma) {
     prisma = new PrismaClient()
