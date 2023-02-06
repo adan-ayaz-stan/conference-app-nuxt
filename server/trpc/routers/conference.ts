@@ -1,3 +1,5 @@
+// Validating data before data goes to database
+
 import { publicProcedure, router } from '../trpc';
 import { z } from 'zod';
 
