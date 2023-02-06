@@ -109,6 +109,7 @@
 <script setup lang="ts"></script>
 
 <style scoped>
+// animations
 	.body {
 		background-color: white;
 		height: 100vh;
