@@ -1,24 +1,38 @@
 {
-  "name": "conference-app-nuxt",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
-  },
-  "devDependencies": {
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/tailwindcss": "^5.3.3",
-    "postcss": "^8.4.17"
-  }
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxtjs/supabase": "^0.3.0",
+		"autoprefixer": "^10.4.13",
+		"nuxt": "3.0.0",
+		"postcss": "^8.4.20",
+		"prisma": "^4.8.1",
+		"tailwindcss": "^3.2.4"
+	},
+	"dependencies": {
+		"@formkit/addons": "^1.0.0-beta.12",
+		"@formkit/icons": "^1.0.0-beta.12",
+		"@formkit/nuxt": "^1.0.0-beta.12",
+		"@formkit/themes": "^1.0.0-beta.12",
+		"@pinia/nuxt": "^0.4.6",
+		"@prisma/client": "^4.8.1",
+		"@supabase/supabase-js": "^2.2.3",
+		"@trpc/client": "^10.9.0",
+		"@trpc/server": "^10.9.0",
+		"aos": "^2.3.4",
+		"daisyui": "^2.49.0",
+		"pinia": "^2.0.29",
+		"superjson": "^1.12.2",
+		"trpc-nuxt": "^0.5.0",
+		"zod": "^3.20.2"
+	},
+	"overrides": {
+		"vue": "latest"
+	}
 }

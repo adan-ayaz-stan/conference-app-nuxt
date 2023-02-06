@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Conference {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId             String
+  title              String
+  date               DateTime
+  location           String
+  description_points String[]
+  description_full   String
+  seats              Int
+  people             String[]
+  organizers         Organizer[]
+  speakers           Speaker[]
+
+  @@map("conference")
+}
+
+model Organizer {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  logo    String
+  logoUrl String
+  name    String
+  website String
+
+  conference   Conference @relation(fields: [conferenceId], references: [id], onDelete: Cascade)
+  conferenceId String     @db.Uuid
+
+  @@map("organizers")
+}
+
+model Speaker {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name         String
+  image        String
+  imageUrl     String
+  position     String
+  company      String
+  about        String
+  Conference   Conference @relation(fields: [conferenceId], references: [id], onDelete: Cascade)
+  conferenceId String     @db.Uuid
+  Schedule     Schedule?
+
+  @@map("speakers")
+}
+
+model Schedule {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  time      DateTime
+  topic     String
+  speaker   Speaker  @relation(fields: [speakerId], references: [id], onDelete: Cascade)
+  speakerId String   @unique @db.Uuid
+
+  @@map("schedules")
+}
