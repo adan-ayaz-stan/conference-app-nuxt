@@ -36,6 +36,7 @@
 <script setup lang="ts">
 	import ArrowRight from '@/assets/icons/arrow-right.vue';
 
+	// Defining middleware here
 	definePageMeta({
 		middleware: 'user-auth',
 	});
