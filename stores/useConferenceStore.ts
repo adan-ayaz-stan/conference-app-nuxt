@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
 import { FullConference } from '~~/types';
 
+// The store for fetching data about all conferences
+
 export const useConferenceStore = defineStore('conference', () => {
 	const { $client } = useNuxtApp();
 	let allConferences = $ref<FullConference[]>();
