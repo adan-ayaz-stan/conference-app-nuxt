@@ -1,5 +1,7 @@
 import { Conference, Organizer, Speaker, Schedule } from '.prisma/client';
 
+// Exporting types for data coming from the database
+
 export interface OrganizerData {
 	website: string;
 	name: string;
