@@ -243,6 +243,7 @@
 </template>
 
 <script setup lang="ts">
+//
 	import { FormKit } from '@formkit/vue';
 	import { useDashComponentStore } from '~~/stores/useDashComponentStore';
 	import { Organizer, Speaker } from '@prisma/client';
