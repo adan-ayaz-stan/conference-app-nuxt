@@ -72,6 +72,7 @@
 </template>
 
 <script setup lang="ts">
+//
 	const client = useSupabaseAuthClient();
 	const user = useSupabaseUser();
 	let formEmail = $ref('');
