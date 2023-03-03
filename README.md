@@ -1,5 +1,5 @@
 # Nuxt Conference Application
-A conference application was created for event creators and attendees to manage conferences efficiently.
+A conference application created for event creators and attendees to manage conferences efficiently.
 
 Made with Nuxt 3, pinia, tailwindcss, Formkit, Typescript, prisma, zod, TRPC, aos and Supabase.
 
