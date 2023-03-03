@@ -1,3 +1,7 @@
+# Nuxt Conference Application
+A conference application was created for event creators and attendees to manage conferences efficiently.
+
+Made with Nuxt 3, pinia, tailwindcss, Formkit, Typescript, prisma, zod, TRPC, aos and Supabase.
 
 # Nuxt 3 Minimal Starter
 
