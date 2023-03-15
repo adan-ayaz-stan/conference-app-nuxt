@@ -90,9 +90,6 @@ const login = async (provider: "github") => {
   isLoading = true;
   const { error } = await client.auth.signInWithOAuth({
     provider,
-    options: {
-      redirectTo: "https://conference-nuxt.vercel.app/dashboard",
-    },
   });
 
   console.log(error);
