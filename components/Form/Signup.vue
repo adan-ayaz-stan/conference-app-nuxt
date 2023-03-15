@@ -94,8 +94,6 @@ const login = async (provider: "github") => {
       redirectTo: "https://conference-nuxt.vercel.app/dashboard",
     },
   });
-
-  console.log(error);
   isLoading = false;
   if (error) {
     validationError = error.message;
