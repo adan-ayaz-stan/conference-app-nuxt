@@ -1,3 +1,5 @@
+Backend might not be alive due to inactivity.
+
 # Nuxt Conference Application
 A conference application created for event creators and attendees to manage conferences efficiently.
 
